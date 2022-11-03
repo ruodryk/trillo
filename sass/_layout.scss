@@ -1,0 +1,55 @@
+.container {
+  max-width: 120rem;
+  min-height: 80rem;
+  background-color: $color-grey--light1;
+  margin: 8rem auto;
+}
+
+.header {
+  font-size: 1.4rem;
+  height: 7rem;
+  background-color: $color-white;
+  border-bottom: $line;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  background-color: $color-grey--dark1;
+  flex: 0 0 18%; //1º grow property // 2º shrink property // 3º flex basis property
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotel-view {
+  background-color: $color-white;
+  flex: 1; // quando abreviamos a propriedade flex, ela aceita a propriedade grow como padrão// nesse caso o valor "1" determina que o item ocupe o restante do espaço disponivel;
+  /* height: 80rem; */
+}
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: $color-grey--light1;
+  border-bottom: $line;
+}
+
+.description {
+  font-size: 1.4rem;
+  background-color: $color-white;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  box-shadow: $shadow-light;
+  padding: 3rem;
+}
+
+.user-reviews {
+  flex: 1;
+}
