@@ -3,6 +3,11 @@
   min-height: 80rem;
   background-color: $color-grey--light1;
   margin: 8rem auto;
+
+  @include respond(desktop) {
+    margin: 0;
+    max-width: 100%;
+  }
 }
 
 .header {
@@ -14,10 +19,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include respond(phone-port) {
+    height: 13rem;
+    align-content: space-around;
+    flex-wrap: wrap;
+  }
 }
 
 .content {
   display: flex;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -39,6 +54,14 @@
   padding: 4.5rem;
   background-color: $color-grey--light1;
   border-bottom: $line;
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
+  @include respond(phone-land) {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -48,6 +71,16 @@
   margin-right: 4.5rem;
   box-shadow: $shadow-light;
   padding: 3rem;
+
+  @include respond(tab-port) {
+    margin-right: 2rem;
+    padding: 1.5rem;
+  }
+
+  @include respond(phone-land) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
 }
 
 .user-reviews {
